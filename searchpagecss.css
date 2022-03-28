@@ -34,7 +34,7 @@ body {
 }
 
 .p::selection{
-    background-color: orange;
+    background-color: #656d4a;
 }
 
 label{
