@@ -5,6 +5,10 @@ function googleOpen(){
             window.open(address);
             document.getElementById("googleBox").value="";
             document.getElementById("button1").value="🔎";
+            return;
+        }
+        if(tB===""){
+            document.getElementById("button1").value="🔎";
         }
 }
 
@@ -14,6 +18,10 @@ function youtubeOpen(){
     if(tB != "" && document.getElementById("button2").value==="search"){
         window.open(address);
         document.getElementById("youtubeBox").value="";
+        document.getElementById("button2").value="🔎";
+        return;
+    }
+    if(tB===""){
         document.getElementById("button2").value="🔎";
     }
 }
