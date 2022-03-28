@@ -33,7 +33,7 @@ body {
     font-size: 20px;
 }
 
-.p::selection{
+.p::selection, label::selection{
     background-color: #656d4a;
 }
 
@@ -50,7 +50,7 @@ section{
 }
 
 input[type="radio"]:hover{
-    box-shadow: 0 0 0 3px orange;
+    box-shadow: 0 0 5px 5px olive;
 }
 
 #mainDiv > section:nth-child(2n+1){
@@ -58,6 +58,22 @@ input[type="radio"]:hover{
 }
 
 #headerDiv{
-    background-color: #070707;
+    width: 1350px;
+    height: 50px;
+}
+
+#sec1{
+    width: 1350px;
+    height: 68px;
+}
+
+#sec2{
+    width: 1350px;
+    height: 69px;  
+}
+
+#sec3{
+    width: 1350px;
+    height: 132px;
 }
 
