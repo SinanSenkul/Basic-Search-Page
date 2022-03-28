@@ -1,2 +1,2 @@
-- Educational web search page, using a bit HTML, a bit CSS, and my own Javascript fantasy.
+- Educational work of designing a web search page, using a bit HTML, a bit CSS, and my own Javascript fantasy.
 - It is focused on learning CSS attributes and will be re-edited from time to time.
