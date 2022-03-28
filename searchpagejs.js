@@ -1,10 +1,21 @@
 function googleOpen(){
         tB=document.getElementById("googleBox").value;
         address="https://www.google.com/search?q="+tB+"";
-        if(tB != ""){
+        if(tB != "" && document.getElementById("button1").value==="search"){
             window.open(address);
             document.getElementById("googleBox").value="";
+            document.getElementById("button1").value="🔎";
         }
+}
+
+function youtubeOpen(){
+    tB=document.getElementById("youtubeBox").value;
+    address="https://youtube.com/results?search_query="+tB+"";
+    if(tB != "" && document.getElementById("button2").value==="search"){
+        window.open(address);
+        document.getElementById("youtubeBox").value="";
+        document.getElementById("button2").value="🔎";
+    }
 }
 
 function radioCheckOpen(){
@@ -97,6 +108,89 @@ function timer(){
         setTimeout(headerSlider,25);
 }
 
+/*
+function buttonTextChanger(box, button){
+    if(document.getElementById(""+box+"").value!=""){
+        if(document.getElementById(""+button+"").value==="🔎"){
+            document.getElementById(""+button+"").value="s";
+            timer2();
+            return;
+        }
+        if(document.getElementById(""+button+"").value==="s"){
+            document.getElementById(""+button+"").value="se";
+            timer2();
+            return;
+        }
+        if(document.getElementById(""+button+"").value==="se"){
+            document.getElementById(""+button+"").value="sea";
+            timer2();
+            return;
+        }
+        if(document.getElementById(""+button+"").value==="sea"){
+            document.getElementById(""+button+"").value="sear";
+            timer2();
+            return;
+        }
+        if(document.getElementById(""+button+"").value==="sear"){
+            document.getElementById(""+button+"").value="searc";
+            timer2();
+            return;
+        }
+        if(document.getElementById(""+button+"").value==="searc"){
+            document.getElementById(""+button+"").value="search";
+            timer2();
+        }
+    }
+    return;
+}
+*/
+
+function buttonTextChanger(num){
+    if(num===1){
+        box="googleBox";
+        button="button1";
+    }
+    if(num===2){
+        box="youtubeBox";
+        button="button2";
+    }
+    if(document.getElementById(box).value!=""){
+        if(document.getElementById(button).value==="🔎"){
+            document.getElementById(button).value="s";
+            timer2();
+            return;
+        }
+        if(document.getElementById(button).value==="s"){
+            document.getElementById(button).value="se";
+            timer2();
+            return;
+        }
+        if(document.getElementById(button).value==="se"){
+            document.getElementById(button).value="sea";
+            timer2();
+            return;
+        }
+        if(document.getElementById(button).value==="sea"){
+            document.getElementById(button).value="sear";
+            timer2();
+            return;
+        }
+        if(document.getElementById(button).value==="sear"){
+            document.getElementById(button).value="searc";
+            timer2();
+            return;
+        }
+        if(document.getElementById(button).value==="searc"){
+            document.getElementById(button).value="search";
+            timer2();
+        }
+    }
+    return;
+}
+
+function timer2(){
+    setTimeout(buttonTextChanger,50);
+}
 /* This code below makes the header slide rightwards then leftwards continuously.
 function headerSlider(){
     if(a===30 && rSlide===true){
