@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Page - SS</title>
+    <link rel="stylesheet" href="searchpagecss.css">
+</head>
+<body onload="timer()">
+<div id="headerDiv">
+        <p id="header">SS Search Main</p>
+</div>
+<br>
+<br>
+<div id="mainDiv">
+<section>
+    <form id="form1" class="form">
+        <p class="p">You can do a search on Google here:</p>
+        <input class="text" id="googleBox" minlength="0" required onkeyup="if(event.keyCode===13){googleOpen.click()}"><button class="button" onclick="googleOpen()">Search Google</button>
+        <hr>
+    </form>
+</section>
+<section>
+    <form action="https://youtube.com/results" target="_blank" id="form2"  class="form">
+        <p class="p">You can do a search on Youtube here:</p>
+        <input class="text" id="youtubeBox" name="search_query" placeholder="" minlength="0" required value="">
+        <button type="submit" class="button">Search Youtube</button>
+        <hr>
+    </form>
+</section>
+<section>
+    <form id="form3" class="form">
+        <p id="pForm3" class="p">Or you can open the desired search website by selecting from these:</p>
+       <input type="radio" id="googleRadio" name="site">
+       <label for="googleRadio">Google</label><br>
+       <input type="radio" id="youtubeRadio" name="site">
+       <label for="youtubeRadio">YouTube</label><br>
+       <input type="radio" id="wikiRadio" name="site">
+       <label for="wikiRadio">Wikipedia</label><br>
+       <input type="button" onclick="radioCheckOpen()" class="button" value="Go!">
+       <hr>
+    </form>
+</section>
+</div>
+<script src="searchpagejs.js"></script>
+</body>
+</html>
