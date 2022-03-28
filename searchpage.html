@@ -11,25 +11,22 @@
 <div id="headerDiv">
         <p id="header">SS Search Main</p>
 </div>
-<br>
-<br>
 <div id="mainDiv">
-<section>
+<section id="sec1">
     <form id="form1" class="form">
         <p class="p">You can do a search on Google here:</p>
-        <input class="text" id="googleBox" minlength="0" required onkeyup="if(event.keyCode===13){googleOpen.click()}"><button class="button" onclick="googleOpen()">Search Google</button>
-        <hr>
+        <input class="text" id="googleBox" minlength="0" required>
+        <input type="button" class="button" id="button1" onclick="buttonTextChanger(1); googleOpen();" value="🔎">
     </form>
 </section>
-<section>
-    <form action="https://youtube.com/results" target="_blank" id="form2"  class="form">
+<section id="sec2">
+    <form id="form2"  class="form">
         <p class="p">You can do a search on Youtube here:</p>
-        <input class="text" id="youtubeBox" name="search_query" placeholder="" minlength="0" required value="">
-        <button type="submit" class="button">Search Youtube</button>
-        <hr>
+        <input class="text" id="youtubeBox" minlength="0" required>
+        <input type="button" class="button" id="button2" onclick="buttonTextChanger(2); youtubeOpen();" value="🔎">
     </form>
 </section>
-<section>
+<section id="sec3">
     <form id="form3" class="form">
         <p id="pForm3" class="p">Or you can open the desired search website by selecting from these:</p>
        <input type="radio" id="googleRadio" name="site">
@@ -39,7 +36,6 @@
        <input type="radio" id="wikiRadio" name="site">
        <label for="wikiRadio">Wikipedia</label><br>
        <input type="button" onclick="radioCheckOpen()" class="button" value="Go!">
-       <hr>
     </form>
 </section>
 </div>
