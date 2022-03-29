@@ -197,7 +197,7 @@ function buttonTextChanger(num){
 }
 
 function timer2(){
-    setTimeout(buttonTextChanger,50);
+    setTimeout(buttonTextChanger,25);
 }
 /* This code below makes the header slide rightwards then leftwards continuously.
 function headerSlider(){
