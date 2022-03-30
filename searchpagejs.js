@@ -5,10 +5,12 @@ function googleOpen(){
             window.open(address);
             document.getElementById("googleBox").value="";
             document.getElementById("button1").value="🔎";
+            document.getElementById(button).style="background-color:transparent";
             return;
         }
         if(tB===""){
             document.getElementById("button1").value="🔎";
+            document.getElementById(button).style="background-color:transparent";
         }
 }
 
@@ -19,11 +21,31 @@ function youtubeOpen(){
         window.open(address);
         document.getElementById("youtubeBox").value="";
         document.getElementById("button2").value="🔎";
+        document.getElementById(button).style="background-color:transparent";
         return;
     }
     if(tB===""){
         document.getElementById("button2").value="🔎";
+        document.getElementById(button).style="background-color:transparent";
     }
+}
+
+function tBChecker(){
+    tB=document.getElementById("youtubeBox").value;
+    if(tB===""){
+        document.getElementById("button2").value="🔎";
+        document.getElementById("button2").style="background-color:transparent";
+    }
+    tB2=document.getElementById("googleBox").value;
+    if(tB2===""){
+        document.getElementById("button1").value="🔎";
+        document.getElementById("button1").style="background-color:transparent";
+    }
+    tBTimer();
+}
+
+function tBTimer(){
+    setTimeout(tBChecker,25);
 }
 
 function radioCheckOpen(){
@@ -51,61 +73,61 @@ var rSlide=true;
 
 function colorChanger(){
         if(r===255 && g===255 && b===255){
-            r=r-5;
+            r=r-1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if(r>0 && r<255 && g===255 && b===255){
-            r=r-5;
+            r=r-1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if (r===0 && g===255 && b===255){
-            g=g-5;
+            g=g-1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if(g>0 && g<255 && r===0 && b===255){
-            g=g-5;
+            g=g-1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if(r===0 && g===0 && b===255){
-            b=b-5;
+            b=b-1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if(b>0 && b<255 && r===0 && g===0){
-            b=b-5;
+            b=b-1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if (r===0 && g===0 && b===0){
-            r=r+5;
+            r=r+1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if(r>g && r<255 && g===b){
-            r=r+5;
+            r=r+1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if(r===255 && g>=b && g<255){
-            g=g+5;
+            g=g+1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
             return;
         }
         if(r===255 && g===255 && b<255){
-            b=b+5;
+            b=b+1;
             document.getElementById("header").style.color="rgb("+r+","+g+","+b+")";
             timer();
         }
@@ -113,6 +135,7 @@ function colorChanger(){
 
 function timer(){
         setTimeout(colorChanger,25);
+        setTimeout(tBChecker,25);
         setTimeout(headerSlider,25);
 }
 
@@ -163,6 +186,7 @@ function buttonTextChanger(num){
         button="button2";
     }
     if(document.getElementById(box).value!=""){
+        document.getElementById(button).style="background-color:olive";
         if(document.getElementById(button).value==="🔎"){
             document.getElementById(button).value="s";
             timer2();
