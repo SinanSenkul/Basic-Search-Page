@@ -15,14 +15,14 @@
 <section id="sec1">
     <form id="form1" class="form">
         <p class="p">Google</p>
-        <input class="text" id="googleBox" minlength="0" required>
+        <input class="text" id="googleBox" minlength="0" required onkeydown="javascript: if(event.keyCode === 13) {event.preventDefault(); document.getElementById('button1').click();}">
         <input type="button" class="button" id="button1" onclick="buttonTextChanger(1); googleOpen();" value="🔎">
     </form>
 </section>
 <section id="sec2">
     <form id="form2"  class="form">
         <p class="p">Youtube</p>
-        <input class="text" id="youtubeBox" minlength="0" required>
+        <input class="text" id="youtubeBox" minlength="0" required onkeydown="javascript: if(event.keyCode === 13) {event.preventDefault(); document.getElementById('button2').click();}">
         <input type="button" class="button" id="button2" onclick="buttonTextChanger(2); youtubeOpen();" value="🔎">
     </form>
 </section>
