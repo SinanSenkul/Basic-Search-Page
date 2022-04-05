@@ -1,3 +1,7 @@
+var r=0;
+var g=0;
+var b=0;
+
 function colorChanger(){
         if(r===255 && g===255 && b===255){
             r=r-1;
