@@ -1,45 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Page - SS</title>
-    <link rel="stylesheet" href="searchpagecss.css">
-</head>
-<body onload="timer();" id="body">
-<div id="headerDiv">
-        <p id="header">SS Search Main</p>
-</div>
-<div id="mainDiv">
-<section id="sec1">
-    <form id="form1" class="form">
-        <p class="p" id="p1">Google</p>
-        <input class="text" id="googleBox" minlength="0" required onkeydown="javascript: if(event.keyCode === 13) {event.preventDefault(); document.getElementById('button1').click();}">
-        <input type="button" class="button" id="button1" onclick="googleOpen();" value="🔎">
-    </form>
-</section>
-<section id="sec2">
-    <form id="form2"  class="form">
-        <p class="p" id="p2">YouTube</p>
-        <input class="text" id="youtubeBox" minlength="0" required onkeydown="javascript: if(event.keyCode === 13) {event.preventDefault(); document.getElementById('button2').click();}">
-        <input type="button" class="button" id="button2" onclick="youtubeOpen();" value="🔎">
-    </form>
-</section>
-<section id="sec3">
-    <form id="form3" class="form">
-        <p id="p3" class="p">Direct links to websites</p>
-       <input type="radio" id="googleRadio" name="site">
-       <label for="googleRadio" id="l1">Google</label><br>
-       <input type="radio" id="youtubeRadio" name="site">
-       <label for="youtubeRadio" id="l2">YouTube</label><br>
-       <input type="radio" id="wikiRadio" name="site">
-       <label for="wikiRadio" id="l3">Wikipedia</label><br>
-       <input type="button" id="button3" onclick="radioCheckOpen()" class="button" value="➥">
-    </form>
-</section>
-<input type="button" id="nightButton" value="🌙" onclick="pageColor()">
-</div>
-<script src="searchpagejs.js"></script>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search Page - SS</title>
+        <link rel="stylesheet" href="searchpagecss.css">
+    </head>
+    <body onload="timer();" id="body">
+        <div id="headerDiv">
+            <p id="header">SS Search Main</p>
+            <input type="button" id="nightButton" value="🌙" onclick="pageColor()" title="Night Mode">
+        </div>
+        <div id="mainDiv">
+            <section id="sec1">
+                <img src="googlelogo.png" alt="Google" style="width:60px;height:20px;">
+                <iframe src="https://www.google.com" title="Google" id="googleFrame"></iframe>
+            </section>
+            <section id="sec2">
+                <img src="youtubelogo.png" alt="Google" style="width:60px;height:20px;">
+                <iframe src="https://www.youtube.com" title="YouTube" id="youTubeFrame"></iframe>
+            </section>
+            <section id="sec3">
+                <img src="wikilogo.png" alt="Google" style="width:60px;height:12px;">
+                <iframe src="https://www.wikipedia.org" title="Wikipedia" id="wikiFrame"></iframe>
+            </section>
+        </div>
+        <script src="searchpagejs.js"></script>
+        <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+    </body>
 </html>
