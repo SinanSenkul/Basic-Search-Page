@@ -1,51 +1,21 @@
 function googleOpen(){
         tB=document.getElementById("googleBox").value;
         address="https://www.google.com/search?q="+tB+"";
-        if(tB != "" && document.getElementById("button1").value==="search"){
+        if(tB != ""){
             window.open(address);
             document.getElementById("googleBox").value="";
-            document.getElementById("button1").value="🔎";
-            document.getElementById(button).style="background-color:transparent";
             return;
-        }
-        if(tB===""){
-            document.getElementById("button1").value="🔎";
-            document.getElementById(button).style="background-color:transparent";
         }
 }
 
 function youtubeOpen(){
     tB=document.getElementById("youtubeBox").value;
     address="https://youtube.com/results?search_query="+tB+"";
-    if(tB != "" && document.getElementById("button2").value==="search"){
+    if(tB != ""){
         window.open(address);
         document.getElementById("youtubeBox").value="";
-        document.getElementById("button2").value="🔎";
-        document.getElementById(button).style="background-color:transparent";
         return;
     }
-    if(tB===""){
-        document.getElementById("button2").value="🔎";
-        document.getElementById(button).style="background-color:transparent";
-    }
-}
-
-function tBChecker(){
-    tB=document.getElementById("youtubeBox").value;
-    if(tB===""){
-        document.getElementById("button2").value="🔎";
-        document.getElementById("button2").style="background-color:transparent";
-    }
-    tB2=document.getElementById("googleBox").value;
-    if(tB2===""){
-        document.getElementById("button1").value="🔎";
-        document.getElementById("button1").style="background-color:transparent";
-    }
-    tBTimer();
-}
-
-function tBTimer(){
-    setTimeout(tBChecker,25);
 }
 
 function radioCheckOpen(){
@@ -57,15 +27,16 @@ function radioCheckOpen(){
        if(document.getElementById("youtubeRadio").checked === true){
         window.open("https://www.youtube.com");
         document.getElementById("youtubeRadio").checked=false;
+        document.getElementById("button3").value="➥";
         return;
        }
        if(document.getElementById("wikiRadio").checked === true){
         window.open("https://www.wikipedia.org");
         document.getElementById("wikiRadio").checked=false;
+        document.getElementById("button3").value="➥";
        }
 }
 
-var a=30;
 var r=0;
 var g=0;
 var b=0;
@@ -135,124 +106,36 @@ function colorChanger(){
 
 function timer(){
         setTimeout(colorChanger,25);
-        setTimeout(tBChecker,25);
-        setTimeout(headerSlider,25);
 }
 
-/*
-function buttonTextChanger(box, button){
-    if(document.getElementById(""+box+"").value!=""){
-        if(document.getElementById(""+button+"").value==="🔎"){
-            document.getElementById(""+button+"").value="s";
-            timer2();
-            return;
-        }
-        if(document.getElementById(""+button+"").value==="s"){
-            document.getElementById(""+button+"").value="se";
-            timer2();
-            return;
-        }
-        if(document.getElementById(""+button+"").value==="se"){
-            document.getElementById(""+button+"").value="sea";
-            timer2();
-            return;
-        }
-        if(document.getElementById(""+button+"").value==="sea"){
-            document.getElementById(""+button+"").value="sear";
-            timer2();
-            return;
-        }
-        if(document.getElementById(""+button+"").value==="sear"){
-            document.getElementById(""+button+"").value="searc";
-            timer2();
-            return;
-        }
-        if(document.getElementById(""+button+"").value==="searc"){
-            document.getElementById(""+button+"").value="search";
-            timer2();
-        }
-    }
-    return;
-}
-*/
-
-function buttonTextChanger(num){
-    if(num===1){
-        box="googleBox";
-        button="button1";
-    }
-    if(num===2){
-        box="youtubeBox";
-        button="button2";
-    }
-    if(document.getElementById(box).value!=""){
-        document.getElementById(button).style="background-color:olive";
-        if(document.getElementById(button).value==="🔎"){
-            document.getElementById(button).value="s";
-            timer2();
-            return;
-        }
-        if(document.getElementById(button).value==="s"){
-            document.getElementById(button).value="se";
-            timer2();
-            return;
-        }
-        if(document.getElementById(button).value==="se"){
-            document.getElementById(button).value="sea";
-            timer2();
-            return;
-        }
-        if(document.getElementById(button).value==="sea"){
-            document.getElementById(button).value="sear";
-            timer2();
-            return;
-        }
-        if(document.getElementById(button).value==="sear"){
-            document.getElementById(button).value="searc";
-            timer2();
-            return;
-        }
-        if(document.getElementById(button).value==="searc"){
-            document.getElementById(button).value="search";
-            timer2();
-        }
-    }
-    return;
-}
-
-function timer2(){
-    setTimeout(buttonTextChanger,25);
-}
-/* This code below makes the header slide rightwards then leftwards continuously.
-function headerSlider(){
-    if(a===30 && rSlide===true){
-        a=a+5;
-        rSlide=true;
-        document.getElementById("header").style.left= ""+a+"px";
+function pageColor(){
+    if(document.getElementById("nightButton").value==="🌙"){
+        document.getElementById("body").style="background-color: #2d2d2d";
+        document.getElementById("sec1").style="background-color: #264653";
+        document.getElementById("sec2").style="background-color: #264653";
+        document.getElementById("sec3").style="background-color: #264653";
+        document.getElementById("p1").style="color: white";
+        document.getElementById("p2").style="color: white";
+        document.getElementById("p3").style="color: white";
+        document.getElementById("l1").style="color: white";
+        document.getElementById("l2").style="color: white";
+        document.getElementById("l3").style="color: white";
+        document.getElementById("button3").style="color: white";
+        document.getElementById("nightButton").value="💡";
         return;
     }
-    if(a>30 && a<900 && rSlide===true){
-        a=a+5;
-        rSlide=true;
-        document.getElementById("header").style.left= ""+a+"px";
-        return;
-    }
-    if(a===900){
-        a=a-5;
-        rSlide=false;
-        document.getElementById("header").style.left= ""+a+"px";
-        return;
-    }
-    if(a>30 && rSlide===false){
-        a=a-5;
-        rSlide=false;
-        document.getElementById("header").style.left= ""+a+"px";
-        return;
-    }
-    if(a===30 && rSlide===false){
-        a=a+5;
-        rSlide=true;
-        document.getElementById("header").style.left= ""+a+"px";
+    if(document.getElementById("nightButton").value==="💡"){
+        document.getElementById("body").style="background-color: white";
+        document.getElementById("sec1").style="background-color: lightgrey";
+        document.getElementById("sec2").style="background-color: lightgrey";
+        document.getElementById("sec3").style="background-color: lightgrey";
+        document.getElementById("p1").style="color: black";
+        document.getElementById("p2").style="color: black";
+        document.getElementById("p3").style="color: black";
+        document.getElementById("l1").style="color: black";
+        document.getElementById("l2").style="color: black";
+        document.getElementById("l3").style="color: black";
+        document.getElementById("button3").style="color: black";
+        document.getElementById("nightButton").value="🌙";
     }
 }
-*/
