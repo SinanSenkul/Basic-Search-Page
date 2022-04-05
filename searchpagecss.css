@@ -1,5 +1,7 @@
 #headerDiv{
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
+    display: flex;
+    align-items: center;
 }
 
 #header{
@@ -8,9 +10,8 @@
     line-height: 0,5;
     letter-spacing: 0.5em;
     font-family: "Century Gothic";
-    font-weight: 1000;
+    font-weight: 900;
     opacity: 0.75;
-    padding-top: 1%;
     display: flex;
     margin: 0 auto;
 }
@@ -20,9 +21,9 @@
     font-family: PT Serif, serif;
 }
 
-div{
+#mainDiv{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-items: space-between;
 }
 
@@ -36,13 +37,8 @@ div{
     transition: 0.25s;
 }
 
-#button1:hover,#button2:hover{
+.button:hover{
     transform: rotate(45deg);
-    cursor: pointer;
-}
-
-#button3:hover{
-    font-size: 1.2em;
     cursor: pointer;
 }
 
@@ -51,7 +47,8 @@ div{
     width: 3%;
     min-width: 40px;
     height: 2.5%;
-    margin: 0 auto;
+    margin-right: 0%;
+    margin-top: 0%;
     font-size: 0.75em;
     background-color: transparent;
     border-color: transparent;
@@ -63,55 +60,31 @@ div{
     transition: 0.25s;
 }
 
-.p{
-    font-size: 1em;
-    font-weight: 450;
-    color:black;
-    letter-spacing: 2px;
-    margin: 3px;
-}
-
-/*.p::first-letter{
-    font-size: 20px;
-}*/
-
-.p::selection, label::selection{
-    background-color: orange;
-}
-
-label{
-    color: black;
-    font-size: 15px;
-    font-weight: 300;
-}
-
-.text{
-    border-radius: 15px;
-    width: 60%;
-    box-sizing: border-box;
-}
-.text:hover{
-    transform: scale(1.05);
-    transition: 0.25s;
-}
-
 section{
     border-radius: 15px;
     border: 0.1em solid gray;
     background-color: lightgray;
-    width: 25%;
-    min-width: 200px;
-    height: 25%;
+    min-width: 30%;
+    height: 530px;
     text-align: center;
+    align-items: center;
     margin: 0 auto;
-    margin-bottom: 0.5%;
     padding: 0.5%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
 }
 
 section:hover{
     transform: translateY(-0.25em);
     transition: 0.25s;
     border: 0.1em solid orange;
+}
+
+iFrame{
+    width: 100%;
+    flex-grow: 1;
+    box-sizing: border-box;
 }
 
 @media (orientation: landscape){
@@ -123,5 +96,14 @@ section:hover{
 @media (max-width:300px){
     #header{
         font-size: 0.75em;
+    }
+}
+
+@media (max-width: 1200px){
+    #mainDiv{
+        flex-direction: column;
+    }
+    section{
+        width:90%;
     }
 }
