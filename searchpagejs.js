@@ -40,7 +40,6 @@ function radioCheckOpen(){
 var r=0;
 var g=0;
 var b=0;
-var rSlide=true;
 
 function colorChanger(){
         if(r===255 && g===255 && b===255){
